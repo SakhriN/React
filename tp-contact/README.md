@@ -1,7 +1,6 @@
 #Projet TOUT SIMPLEMENT INCROYABLE
 
 Je peux ajouter des tâches qui vont s'afficher grace a l'API, mais les boutons éditer et Supprimer ne sont pas encore finalisé.
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Rick Astley - Never Gonna Give You Up (Official Music Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Getting Started with Create React App
 
