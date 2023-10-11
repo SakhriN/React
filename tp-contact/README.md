@@ -1,3 +1,8 @@
+#Projet TOUT SIMPLEMENT INCROYABLE
+
+Je peux ajouter des tâches qui vont s'afficher grace a l'API, mais les boutons éditer et Supprimer ne sont pas encore finalisé.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
