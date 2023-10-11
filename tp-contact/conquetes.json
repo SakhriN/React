@@ -1,0 +1,10 @@
+{
+  "test": [
+    {
+      "id": 1,
+      "nom": "Hitler",
+      "prenom": "Adolf",
+      "birth": 454
+    }
+  ]
+}
