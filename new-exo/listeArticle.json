@@ -1,0 +1,40 @@
+{
+    "listeArticle": [
+        {
+            "id" : "1", 
+            "nom" : "kalach",
+            "description" : "C'est une kalachnikov, belle arme pour montrer la virilité",
+            "prix" : 250
+        },
+        {
+            "id" : "2", 
+            "nom" : "grenade",
+            "description" : "KABOOM",
+            "prix" : 250
+        },
+        {
+            "id" : "3", 
+            "nom" : "PS5",
+            "description" : "Dernière console sortie a ce jour de chez PlayStation.",
+            "prix" : 250
+        },
+        {
+            "id" : "4", 
+            "nom" : "PS4",
+            "description" : "Avant dernière console sortie a ce jour de chez PlayStation.",
+            "prix" : 250
+        },
+        {
+            "id" : "5", 
+            "nom" : "PS3",
+            "description" : "Avant avant dernière console sortie a ce jour de chez PlayStation.",
+            "prix" : 250
+        },
+        {
+            "id" : "6", 
+            "nom" : "PS2",
+            "description" : "ancienne console sortie a ce jour de chez PlayStation. La meilleure",
+            "prix" : 250
+        }
+    ]
+}
