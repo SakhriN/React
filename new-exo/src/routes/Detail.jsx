@@ -1,8 +1,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 function Detail() {
+  let navigue = useNavigate()
 const {id} = useParams();
 const [article, setArticle] = useState([]);
 useEffect(() => {
@@ -16,6 +17,14 @@ useEffect(() => {
         console.error(error);
       });
     }, [id]);
+
+    function addToLocale() {
+      localStorage.setItem("id", Math.round(Math.random()*150))
+      localStorage.setItem("nom", article.nom)
+      localStorage.setItem("",article.prix)
+      navigue("/Panier/")
+    }
+
     return (
 
         <>
@@ -31,7 +40,7 @@ useEffect(() => {
             <h2>PRIX :</h2>
             <h2>{article.prix} €</h2>
             <hr></hr>
-            <button>Ajouter au PANIER</button>
+            <button onclick={()=>{addToLocale()}}>Ajouter au PANIER</button>
         </>
     )
 }

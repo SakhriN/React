@@ -6,22 +6,18 @@ import { useNavigate } from 'react-router-dom';
         const [articles, setArticles] = useState([]);
         let navigue = useNavigate()
         useEffect(() => {
-          axios.get("http://localhost:6900/panier")
-            .then(response => {
-              setArticles(response.data);
-              console.log(articles);
-            })
-            .catch(error => {
-              console.error(error);
-            });
-        }, []); // Le tableau vide [] signifie que useEffect s'exécute une seule fois après le montage initial
-      
+console.log(localStorage)
+        }, [localStorage]); // Le tableau vide [] signifie que useEffect s'exécute une seule fois après le montage initial
+       
+        function test(){
+        navigue(`/`)
+       }
         return (
           <div>
-            <button onClick={()=>{navigue(`/`)}}>Retour au menu principal</button>
+            <button onClick={()=>{test()}}>Retour au menu principal</button>
             <h1>Liste des Articles</h1>
 
-            {articles.length == 0 ? 
+            {articles.length > 0 ? 
             <ul>
               {articles.map(article => (
                 <li key={article.id}>
