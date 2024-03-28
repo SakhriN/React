@@ -26,7 +26,7 @@ import { useEffect, useRef } from 'react';
   const tacheRef = useRef()
   function addTask(e) {
     e.preventDefault()
-    axios.post("http://localhost:6969/liste", { tache: tacheRef.current.value, id:Math.round(Math.random()*181215) })
+    axios.post("http://localhost:6969/liste", { tache: tacheRef.current.value, id:Math.round(Math.random()*1000) })
       .then(response => {
         console.log(response.data)
         init()
