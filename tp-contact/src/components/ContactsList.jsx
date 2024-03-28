@@ -1,10 +1,10 @@
 
 
 const contactlist = [
-  { firstname: "John" },
-  { lastname: "Jane" },
-  { numTel: "Alice" },
-  { email: "test@example.com" },
+  {   firstname: "John" ,
+   lastname: "Jane" ,
+   numero: "Alice" ,
+   email: "test@example.com"}
 ];
 
 

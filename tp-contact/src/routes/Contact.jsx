@@ -1,22 +1,27 @@
-import { useParams, useSearchParams } from "react-router-dom"
 import Formu from "../components/Form";
-import contactlist from "../components/ContactsList";
+import ContactsList from "../components/ContactsList"; // Importez ContactsList ici
+
 function Contact() {
-  const [searchParams] = useSearchParams()
-  const cont = searchParams.get(contactlist) ?? "Il n'y a aucun contact"
 
   return (
-    <div >
-<Formu/>
-<hr></hr>
-<button> Add</button>
-<h2>{cont}</h2>
-
-
-
-
+    <div>
+      <Formu />
+      <hr />
+      <table>
+        <thead>{/* Entêtes de table */}</thead>
+        <tbody>{/* Contenu de la table */}</tbody>
+      </table>
+      {/* Utilisez directement le tableau contactlist ici */}
+      {ContactsList.map((contact, index) => (
+        <div key={index}>
+          <p>Prénom : {contact.firstname}</p>
+          <p>Nom : {contact.lastname}</p>
+          <p>Numéro de téléphone : {contact.numero}</p>
+          <p>Email : {contact.email}</p>
+        </div>
+      ),[ContactsList])}
     </div>
   );
 }
 
-export default Contact
+export default Contact;

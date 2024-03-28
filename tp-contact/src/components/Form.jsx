@@ -1,9 +1,9 @@
 import { useState } from "react";
-
+import contactlist from "../components/ContactsList";
 function Formu() {
     const [formData, setFormData] = useState({
-        nom: null,
-        prenom: null,
+        lastname: null,
+        firstname: null,
         email: null,
         numero: null
     });
@@ -20,17 +20,21 @@ function Formu() {
         e.preventDefault();
         // Utilisez formData pour envoyer les données ou effectuer d'autres opérations
         console.log('Données du formulaire :', formData);
+        contactlist.push(formData);
+        console.log(contactlist)
+
+
     };
 
     return (
         <form onSubmit={handleSubmit}>
             <div>
                 <label>Nom :</label>
-                <input type="text" name="nom" value={formData.nom || ''} onChange={handleInputChange} />
+                <input type="text" name="lastname" value={formData.lastname || ''} onChange={handleInputChange} />
             </div>
             <div>
                 <label>Prénom :</label>
-                <input type="text" name="prenom" value={formData.prenom || ''} onChange={handleInputChange} />
+                <input type="text" name="firstname" value={formData.firstname || ''} onChange={handleInputChange} />
             </div>
 
             <div>
