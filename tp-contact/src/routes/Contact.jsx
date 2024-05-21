@@ -1,25 +1,35 @@
 import Formu from "../components/Form";
-import ContactsList from "../components/ContactsList"; // Importez ContactsList ici
+import contactlist from "../components/ContactsList";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Contact() {
 
+let tableau = contactlist
+console.log(tableau)
   return (
     <div>
       <Formu />
       <hr />
-      <table>
-        <thead>{/* Entêtes de table */}</thead>
-        <tbody>{/* Contenu de la table */}</tbody>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Prénom : </th>
+            <th>Nom : </th>
+            <th>Numéro de téléphone : </th>
+            <th>Email : </th>
+          </tr>
+        </thead>
+        <tbody>
+          {contactlist.map((contact, index) => (
+          <tr key={index}>
+            <td>{contact.firstname}</td>
+            <td>{contact.lastname}</td>
+            <td>{contact.numero}</td>
+            <td>{contact.email}</td>
+          </tr>
+          ),[contactlist])}
+        </tbody>
       </table>
-      {/* Utilisez directement le tableau contactlist ici */}
-      {ContactsList.map((contact, index) => (
-        <div key={index}>
-          <p>Prénom : {contact.firstname}</p>
-          <p>Nom : {contact.lastname}</p>
-          <p>Numéro de téléphone : {contact.numero}</p>
-          <p>Email : {contact.email}</p>
-        </div>
-      ),[ContactsList])}
     </div>
   );
 }

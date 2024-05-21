@@ -2,19 +2,23 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+
+
+
 function ListeArticles() {
   const [articles, setArticles] = useState([]);
   let navigue = useNavigate()
+
   useEffect(() => {
-    axios.get("http://localhost:6969/listeArticle")
+    axios.get("http://localhost:6969/articles")
       .then(response => {
-        setArticles(response.data);
-        console.log(response.data);
+        setArticles(response.data.listeArticle); // Vous pouvez accéder aux articles via response.data.listeArticle
       })
       .catch(error => {
         console.error(error);
       });
-  }, []); // Le tableau vide [] signifie que useEffect s'exécute une seule fois après le montage initial
+  }, []);
+ // Le tableau vide [] signifie que useEffect s'exécute une seule fois après le montage initial
 
   return (
     <div>

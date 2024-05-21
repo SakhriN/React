@@ -1,0 +1,10 @@
+{
+  "contactList": [
+    {
+      "firstname": "John",
+      "lastname": "Jane",
+      "numero": "Alice",
+      "email": "test@example.com"
+    }
+  ]
+}

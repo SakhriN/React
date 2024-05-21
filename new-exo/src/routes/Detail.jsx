@@ -6,9 +6,10 @@ function Detail() {
   let navigue = useNavigate()
 const {id} = useParams();
 const [article, setArticle] = useState([]);
+
 useEffect(() => {
     console.log(id)
-    axios.get(`http://localhost:6969/listeArticle/${id}`)
+    axios.get(`http://localhost:6969/article/${id}`)
       .then(response => {
         setArticle(response.data);
 
